@@ -18,15 +18,15 @@ package ru.d10xa.groovyconsolebot.security;
 
 import java.security.Permission;
 
-public class SelectiveStrictSecurityManager extends SecurityManager {
+public class StrictlyProhibitedSecurityManager extends SecurityManager {
 
     private final SecurityManager parent;
 
-    public SelectiveStrictSecurityManager(final SecurityManager parent) {
+    public StrictlyProhibitedSecurityManager(final SecurityManager parent) {
         this.parent = parent;
     }
 
-    public SelectiveStrictSecurityManager() {
+    public StrictlyProhibitedSecurityManager() {
         this(System.getSecurityManager());
     }
 
@@ -43,6 +43,14 @@ public class SelectiveStrictSecurityManager extends SecurityManager {
     @Override
     public void checkExit(final int code) {
         throw new SecurityException("Use of System.exit() is forbidden!");
+    }
+
+    /**
+     * Always throws {@link SecurityException}.
+     */
+    @Override
+    public void checkWrite(String file) {
+        throw new SecurityException("Writing file is forbidden!");
     }
 
 }
