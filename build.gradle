@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'groovy'
     id 'jacoco'
+    id 'com.github.kt3k.coveralls' version '2.6.3'
 }
 
 sourceCompatibility = 1.8
@@ -26,4 +27,11 @@ sourceSets.main.groovy.srcDirs = ["src/main/java", "src/main/groovy"]
 
 jacoco {
     toolVersion = '0.7.7.201606060606'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
 }
