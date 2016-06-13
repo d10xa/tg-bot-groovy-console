@@ -13,12 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ru.d10xa.groovyconsolebot.botapi
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
+/**
+ * Represents a response from getUpdates method
+ * https://core.telegram.org/bots/api#getupdates
+ */
 @CompileStatic
 @EqualsAndHashCode
 class GetUpdatesResponse {

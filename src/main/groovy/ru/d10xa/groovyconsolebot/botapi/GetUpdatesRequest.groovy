@@ -13,15 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ru.d10xa.groovyconsolebot.botapi
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
 /**
- * Use this method to receive incoming updates using long polling
- * @see <a href="https://core.telegram.org/bots/api#getupdates">https://core.telegram.org/bots/api#getupdates</a>
+ * Use this request object to receive incoming updates using long polling
+ * https://core.telegram.org/bots/api#getupdates
  */
 @CompileStatic
 @EqualsAndHashCode

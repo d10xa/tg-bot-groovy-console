@@ -13,20 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ru.d10xa.groovyconsolebot.botapi
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
+/**
+ * This object represents a Telegram user or bot.
+ * https://core.telegram.org/bots/api#user
+ */
 @CompileStatic
 @EqualsAndHashCode
-final class User {
+class User {
 
     Long id
 
+    @SuppressWarnings('PropertyName')
     String first_name
 
+    @SuppressWarnings('PropertyName')
     String last_name
 
     String username

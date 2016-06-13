@@ -13,12 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ru.d10xa.groovyconsolebot.botapi
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
+/**
+ * Use this request object to send text messages
+ * https://core.telegram.org/bots/api#sendmessage
+ */
 @CompileStatic
 @EqualsAndHashCode
 class SendMessageRequest {
@@ -27,9 +30,11 @@ class SendMessageRequest {
      * Unique identifier for the target chat or username
      * of the target channel (in the format @channelusername)
      */
+    @SuppressWarnings('PropertyName')
     String chat_id
 
     String text
 
+    @SuppressWarnings('PropertyName')
     String reply_to_message_id
 }

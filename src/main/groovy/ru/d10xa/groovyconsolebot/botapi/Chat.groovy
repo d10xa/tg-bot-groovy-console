@@ -1,4 +1,3 @@
-package ru.d10xa.groovyconsolebot.botapi
 /*
  * Copyright 2016 the original author or authors.
  *
@@ -14,10 +13,15 @@ package ru.d10xa.groovyconsolebot.botapi
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package ru.d10xa.groovyconsolebot.botapi
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
+/**
+ * This object represents a chat.
+ * https://core.telegram.org/bots/api#chat
+ */
 @CompileStatic
 @EqualsAndHashCode
 final class Chat {
@@ -31,8 +35,10 @@ final class Chat {
 
     String title
 
+    @SuppressWarnings('PropertyName')
     String first_name
 
+    @SuppressWarnings('PropertyName')
     String last_name
 
     String username

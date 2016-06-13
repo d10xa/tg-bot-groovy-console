@@ -13,19 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package ru.d10xa.groovyconsolebot.botapi
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 
+/**
+ * This object represents a message.
+ * https://core.telegram.org/bots/api#message
+ */
 @CompileStatic
 @EqualsAndHashCode
 class Message {
+
+    @SuppressWarnings('PropertyName')
     Long message_id
+
     User from
+
     Chat chat
+
     Long date
+
     String text
+
+    @SuppressWarnings('PropertyName')
     User new_chat_member
 }
