@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 596105480,
+      "message": {
+        "message_id": 586,
+        "from": {
+          "id": 1111111,
+          "first_name": "First",
+          "last_name": "Last",
+          "username": "d10xa"
+        },
+        "chat": {
+          "id": -101111777,
+          "title": "GroovyTest",
+          "type": "group"
+        },
+        "date": 1465799185,
+        "new_chat_participant": {
+          "id": 199999111,
+          "first_name": "Groovy Console",
+          "username": "TestGroovyConsoleBot"
+        },
+        "new_chat_member": {
+          "id": 199999111,
+          "first_name": "Groovy Console",
+          "username": "TestGroovyConsoleBot"
+        }
+      }
+    }
+  ]
+}

@@ -27,4 +27,5 @@ class Message {
     Chat chat
     Long date
     String text
+    User new_chat_member
 }
